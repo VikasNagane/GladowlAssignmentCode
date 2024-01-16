@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Related Courses</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #007bff;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #collegeSelect {
+      width: 200px;
+      padding: 5px;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    #relatedCourses {
+      max-width: 600px;
+      margin-top: 10px;
+    }
+
+    .course-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Show Related Courses</h1>
+
+    <label for="collegeSelect">Select College:</label>
+    <select id="collegeSelect" class="form-control" onchange="showRelatedCourses()">
+      <option value="">None</option>
+    </select>
+
+    <h2 class="mt-4">Related Courses:</h2>
+    <div id="relatedCourses"></div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="script.js"></script>
+  <script>
+    populateCollegeDropdown();
+  </script>
+</body>
+</html>
